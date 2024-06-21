@@ -4,128 +4,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lanchonete Nova Esfiha</title>
+    <title>Lanchonete Best Esfiha</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
     
 <!-- header section starts  -->
-
 <header class="header">
-
-    <a href="#" class="logo">
-        <img src="images/logo.png" alt="">
-    </a>
-
+    <a href="#" class="logo"><img src="images/logo.png" alt="Logo"></a>
     <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#menu">menu</a>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+  
     </nav>
-
     <div class="icons">
-        <div class="fas fa-search" id="search-btn"></div>
-        <div class="fas fa-shopping-cart" id="cart-btn"></div>
-        <div class="fas fa-bars" id="menu-btn"></div>
+        <div id="menu-btn">&#9776;</div>
+        <div id="search-btn">&#128269;</div>
+        <div id="cart-btn">&#128722;</div>
+    </div>
+    
+    <div class="search-form">
+        <input type="text" id="search-input" placeholder="Search products...">
+    </div>
+    <div class="cart-items-container">
+        <!-- Carrinho de compras -->
+        <div class="cart-item">
+            <span class="fa fa-times"></span>
+            <img src="images/Lanche__4.png" alt="Produto">
+            <div class="content">
+                <h3>Coxinhas</h3>
+                <span class="price">R$5.00</span>
+            </div>
+        </div>
+        <div class="btn">Checkout</div>
     </div>
 </header>
 
 
-<section class="home" id="home">
-
-    <div class="content">
-        <h3>CAFÉ FRESCO PELA MANHÃ</h3>
+<!-- Carrinho de Compras -->
+<div id="cart" class="cart">
+    <h2>Carrinho de Compras</h2>
+    <div id="cart-items">
+        <!-- Itens do Carrinho aparecerão aqui -->
     </div>
+    <div id="cart-total">
+        Total: <span id="cart-total-price">R$0.00</span>
+    </div>
+</div>
 
+<section class="home" id="home">
+    <div class="content">
+        <h3>Os melhores salgados da região</h3>
+    </div>
 </section>
-
-
 
 <section class="menu" id="menu">
-
-    <h1 class="heading">Nosso Cardápio</span> </h1>
-
+    <h1 class="heading">Nosso Cardápio</h1>
     <div class="box-container">
-
-        <div class="box">
-            <img src="images/Lanche__1.png" alt="esfiha de carne">
-            <h3>nome da comida</h3>
+        <!-- Produtos -->
+        <div class="box" data-id="1" data-name="Esfiha de Carne" data-price="15.99" data-img="images/lanche-brasileiro.png">
+            <img src="images/lanche-brasileiro.png" alt="esfiha de carne">
+            <h3>Esfiha de Carne</h3>
             <div class="price">R$15,99</div>
-            <a href="#" class="btn">adicionar ao carrinho</a>
+            <button class="btn add-to-cart">Adicionar ao Carrinho</button>
         </div>
-
-        <div class="box">
-            <img src="images/Lanche__2.png" alt="">
-            <h3>nome da comida</h3>
-            <div class="price">R$15,99</div>
-            <a href="#" class="btn">adicionar ao carrinho</a>
+        
+        <div class="box" data-id="2" data-name="Esfiha de Calabresa" data-price="7.99" data-img="images/Lanche__2.png">
+            <img src="images/Lanche__2.png" alt="Esfiha de Calabresa">
+            <h3>Esfiha de Calabresa</h3>
+            <div class="price">R$7,99</div>
+            <button class="btn add-to-cart">Adicionar ao Carrinho</button>
         </div>
-
-        <div class="box">
-            <img src="images/Lanche__3.png" alt="">
-            <h3>nome da comida</h3>
-            <div class="price">R$15,99</div>
-            <a href="#" class="btn">adicionar ao carrinho</a>
+        
+        <div class="box" data-id="3" data-name="Coxinhas" data-price="12.99" data-img="images/Lanche__4.png">
+            <img src="images/Lanche__4.png" alt="coxinhas">
+            <h3>Coxinhas</h3>
+            <div class="price">R$12,99</div>
+            <button class="btn add-to-cart">Adicionar ao Carrinho</button>
         </div>
+        
 
-        <div class="box">
-            <img src="images/Lanche__4.png" alt="">
-            <h3>nome da comida</h3>
-            <div class="price">R$15,99</div>
-            <a href="#" class="btn">adicionar ao carrinho</a>
-        </div>
-
-        <div class="box">
-            <img src="images/menu-5.png" alt="">
-            <h3>nome da comida</h3>
-            <div class="price">R$15,99</div>
-            <a href="#" class="btn">adicionar ao carrinho</a>
-        </div>
-
-        <div class="box">
-            <img src="images/menu-6.png" alt="">
-            <h3>nome da comida</h3>
-            <div class="price">R$15,99 </div>
-            <a href="#" class="btn">adicionar ao carrinho</a>
-        </div>
-
-        <div class="box">
-            <img src="images/menu-6.png" alt="">
-            <h3>nome da comida</h3>
-            <div class="price">R$15,99 </div>
-            <a href="#" class="btn">adicionar ao carrinho</a>
-        </div>
-
-        <div class="box">
-            <img src="images/menu-6.png" alt="">
-            <h3>nome da comida</h3>
-            <div class="price">R$15,99 </div>
-            <a href="#" class="btn">adicionar ao carrinho</a>
-        </div>
-
-        <div class="box">
-            <img src="images/menu-6.png" alt="">
-            <h3>nome da comida</h3>
-            <div class="price">R$15,99 </div>
-            <a href="#" class="btn">adicionar ao carrinho</a>
-        </div>
-
+        <!-- Outros produtos... -->
     </div>
-
 </section>
 
-
 <section class="review" id="review">
-
-    <h1 class="heading"> Avaliações</h1>
-
+    <h1 class="heading">Avaliações</h1>
     <div class="box-container">
-
+        <!-- Avaliações -->
         <div class="box">
             <img src="images/quote-img.png" alt="" class="quote">
             <p>Lanche maravilhoso !!!</p>
@@ -167,29 +138,33 @@
                 <i class="fas fa-star-half-alt"></i>
             </div>
         </div>
-
     </div>
-
 </section>
 
-
-
-
-
-<section class="footer">
-
+<footer class="footer">
     <div class="share">
-        <a href="#" class="fab fa-facebook-f"></a>
-        <a href="#" class="fab fa-twitter"></a>
-        <a href="#" class="fab fa-instagram"></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
     </div>
-
     <div class="links">
-        <a>home</a>
-        <a>menu</a>      
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Menu</a>
+        <a href="#">Products</a>
+        <a href="#">Reviews</a>
+        <a href="#">Contact</a>
     </div>
-</section>
-<script src="js/script.js"></script>
+    <div class="contact-info">
+        <a href="mailto:info@example.com">info@example.com</a>
+        <a href="tel:+123456789">+11 9999-8888</a>
+    </div>
+    <div class="credit">
+        &copy; 2024 Your Website Name. Designed by <span>Guilherme Barbarino</span>.
+    </div>
+</footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
